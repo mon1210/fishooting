@@ -38,8 +38,9 @@ public class BossController : MonoBehaviour
         switch (currentPatt)
         {
             case ActionPart.Appearance:
-
-                break;
+            
+        
+            break;
 
             case ActionPart.Battle:
 

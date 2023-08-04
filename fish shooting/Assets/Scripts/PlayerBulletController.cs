@@ -24,4 +24,14 @@ public class PlayerBulletController : MonoBehaviour
     {
         Destroy(this.gameObject);
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            //Enemytagを持っているオブジェクトを削除
+            Destroy(gameObject);
+        }
+
+    }
 }

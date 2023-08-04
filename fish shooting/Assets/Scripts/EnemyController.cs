@@ -28,6 +28,8 @@ public class EnemyController : MonoBehaviour
         {
 
             Destroy(gameObject);
+            GameObject factory = GameObject.Find("EnemyFactory");
+            factory.GetComponent<EnemyFactory>().Defeat();
         }
 
 

@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EnemiFactory : MonoBehaviour
+public class EnemyFactory : MonoBehaviour
 {
     public GameObject EnemyPrefab;
     public int defeatCount = -1;
@@ -11,12 +12,17 @@ public class EnemiFactory : MonoBehaviour
     void Start()
     {
         StartCoroutine(Create());
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
+    }
+    public void Defeat()
+    {
+        defeatCounter++;
     }
     IEnumerator Create()
     {
@@ -31,7 +37,13 @@ public class EnemiFactory : MonoBehaviour
 
             Instantiate(EnemyPrefab, pos, Quaternion.identity);
             yield return new WaitForSeconds(intervl_time);
+
+            
         }
 
     }
+
+
+
+
 }
