@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Start is called before the first frame updat
     void Start()
     {
         
@@ -21,6 +22,7 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,8 +30,8 @@ public class EnemyController : MonoBehaviour
         {
 
             Destroy(gameObject);
-            GameObject factory = GameObject.Find("EnemyFactory");
-            factory.GetComponent<EnemyFactory>().Defeat();
+           
+
         }
 
 

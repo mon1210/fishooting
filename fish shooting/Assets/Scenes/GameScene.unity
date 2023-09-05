@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPrefab: {fileID: 5424773998467951216, guid: f80b591d21858f74f9968c102654c331, type: 3}
-  defeatCount: 1
+  defeatCount: 5
 --- !u!1 &1628162659
 GameObject:
   m_ObjectHideFlags: 0

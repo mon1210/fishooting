@@ -12,18 +12,19 @@ public class EnemyFactory : MonoBehaviour
     void Start()
     {
         StartCoroutine(Create());
-      
+        StartCoroutine(ChangeScene("BossSceene"));
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+     
     }
     public void Defeat()
     {
         defeatCounter++;
     }
+
     IEnumerator Create()
     {
         float intervl_time = 2.0f;
@@ -37,13 +38,14 @@ public class EnemyFactory : MonoBehaviour
 
             Instantiate(EnemyPrefab, pos, Quaternion.identity);
             yield return new WaitForSeconds(intervl_time);
-
             
-        }
-
+        }      
     }
 
+    IEnumerator ChangeScene(string scene_name)
+    {
+        yield return new WaitForSeconds(5.0f);
 
-
-
+        SceneManager.LoadScene("BossScene");
+    }
 }
